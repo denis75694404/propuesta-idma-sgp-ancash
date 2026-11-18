@@ -171,6 +171,24 @@ section.s.alt{background:var(--surface2)}
 .tc .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--surface2);margin-bottom:10px}
 .tc .ic svg{width:26px;height:26px;stroke:var(--quinua);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tc p{color:var(--muted);font-size:.93rem;margin:0}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:22px}
+.wcard{position:relative;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:var(--r);padding:18px 18px 16px 64px;box-shadow:var(--shadow-s)}
+.wcard .n{position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:800}
+.wcard h3{margin:0 0 6px;color:var(--c);font-size:1.05rem}
+.wcard p{margin:0 0 8px;font-size:.93rem}
+.wcard small{display:block;color:var(--muted);font-size:.82rem}
+.wstrip{margin-top:18px;background:#FFF7D1;color:#1F2A1F;border:1px solid #8DC63F;border-radius:var(--r);padding:16px 20px;text-align:center}
+.wstrip b{color:#045A13}
+.pre{margin-top:30px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pre table{width:100%;min-width:620px;border-collapse:collapse;background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-s);font-size:.9rem}
+.pre th{background:#045A13;color:#fff;text-align:left;padding:10px 12px}
+.pre td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+.pre td:first-child{font-weight:700;white-space:nowrap}
+.pre .st{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:700;background:var(--surface2);color:var(--muted)}
+.pre .ok{background:#E3F0DC;color:#045A13}.pre .gap{background:#FFF7D1;color:#8a6500}
+.gen{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-top:5px solid #B8860B;border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow-s)}
+.gen h3{margin:0 0 8px;color:#B8860B}
+.gen ul{margin:8px 0 0;padding-left:20px}.gen li{margin:5px 0}
 .tool{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-s)}
 @media (max-width:760px){.tool{grid-template-columns:1fr}}
 .tool h4{margin:0 0 6px;font-size:1.05rem}
@@ -251,7 +269,7 @@ footer small{color:#A6BFA2}
 <body>
 <div id="prog"></div>
 <nav class="top" aria-label="Secciones">
-  <a href="#inicio">Inicio</a><a href="#contexto">Contexto</a><a href="#camino">Camino</a><a href="#objetivos">Objetivos</a><a href="#metodo">Método</a><a href="#actores">Actores</a><a href="#cronograma">Cronograma</a><a href="#presupuesto">Presupuesto</a><a href="#ambito">Ámbito</a><a href="#equipo">Equipo</a>
+  <a href="#inicio">Inicio</a><a href="#porque">Por qué</a><a href="#contexto">Contexto</a><a href="#camino">Camino</a><a href="#objetivos">Objetivos</a><a href="#metodo">Método</a><a href="#actores">Actores</a><a href="#cronograma">Cronograma</a><a href="#presupuesto">Presupuesto</a><a href="#ambito">Ámbito</a><a href="#equipo">Equipo</a>
   <button id="theme" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
 </nav>
 
@@ -288,6 +306,18 @@ footer small{color:#A6BFA2}
       <div class="kpi tilt rv d1" style="--c:var(--chacra)"><b data-count="2">0</b><span>talleres: línea de tiempo y validación de hallazgos</span></div>
       <div class="kpi tilt rv d2" style="--c:var(--tierra)"><b data-count="40" data-suf=" %">0</b><span>de las personas entrevistadas serán mujeres, como mínimo</span></div>
       <div class="kpi tilt rv d3" style="--c:var(--maiz)"><b data-count="7155" data-pre="S/ ">0</b><span>a todo costo · dos pagos de 50 %</span></div>
+    </div>
+    <div id="porque" style="scroll-margin-top:80px">
+      <h3 class="rv" style="margin-top:46px">¿Por qué elegir a este equipo?</h3>
+      <div class="why">
+        <article class="wcard rv d1" style="--c:var(--chacra)"><span class="n">1</span><h3>Sabemos sistematizar</h3><p>Ruta de los cinco tiempos (Jara Holliday, 2018) para pasar del «qué pasó» al «qué aprendimos».</p><small>Evidencia: sistematizaciones para Devida (2026) y para Unicef y Prisma (2026).</small></article>
+        <article class="wcard rv d2" style="--c:var(--quinua)"><span class="n">2</span><h3>Conocemos el SGP desde dentro</h3><p>El personal de apoyo se formó como proveedor de servicios rurales, con módulo de sistemas participativos de garantía.</p><small>Evidencia: IFOAM Organics International, 200 horas (2019-2021).</small></article>
+        <article class="wcard rv d3" style="--c:var(--glaciar)"><span class="n">3</span><h3>Entendemos al SENASA</h3><p>La ruta normativa (OE3) es lo más difícil y lo más útil para otras regiones: requisitos, auditorías, observaciones y subsanaciones.</p><small>Evidencia: auditorías del SENASA y de certificación internacional (Beta, 2018-2022).</small></article>
+        <article class="wcard rv d1" style="--c:var(--tierra)"><span class="n">4</span><h3>Las mujeres al centro</h3><p>Capítulo propio, espacio solo de productoras y datos separados por sexo, como pide la actividad 4.2.</p><small>Evidencia: enfoque de género de la propuesta e índice del documento.</small></article>
+        <article class="wcard rv d2" style="--c:var(--andino)"><span class="n">5</span><h3>Ya empezamos a investigar</h3><p>Antes de postular reconstruimos una pre-cronología con fuentes públicas y ubicamos los vacíos que llenará el campo.</p><small>Evidencia: pre-cronología en la sección «Camino».</small></article>
+        <article class="wcard rv d3" style="--c:var(--chacra)"><span class="n">6</span><h3>Más de lo que se pide, a tiempo</h3><p>Captura digital con IA y doble revisión para cumplir 15 días. Además: hoja de ruta replicable, matriz normativa, base de datos, resumen de 4 páginas y este tablero.</p><small>Evidencia: secciones «Método» y «Productos».</small></article>
+      </div>
+      <div class="wstrip rv"><b>Método de sistematización + conocimiento del SGP y del SENASA.</b> El equipo reúne las dos mitades que pide el TDR, en 15 días, con doble revisión de cada dato y por S/ 7,155 a todo costo.</div>
     </div>
   </div>
 </section>
@@ -329,6 +359,18 @@ footer small{color:#A6BFA2}
       <svg class="path" preserveAspectRatio="none" viewBox="0 0 6 100"><defs><linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B753A"/><stop offset="1" stop-color="#F2C200"/></linearGradient></defs><line class="track" x1="3" y1="0" x2="3" y2="100" vector-effect="non-scaling-stroke"/><line class="draw" id="drawline" x1="3" y1="0" x2="3" y2="0" vector-effect="non-scaling-stroke"/></svg>
       <div id="steps"></div>
     </div>
+    <h3 class="rv" style="margin-top:46px">Ya empezamos a investigar: pre-cronología con fuentes públicas</h3>
+    <p class="lead rv d1">Lo que ya está documentado y los vacíos que el trabajo de campo llenará con los expedientes y los testimonios.</p>
+    <div class="pre rv d2"><table><thead><tr><th>Fecha</th><th>Hito</th><th>Fuente</th><th>Estado</th></tr></thead><tbody>
+      <tr><td>2008</td><td>Ley N.° 29196 de promoción de la producción orgánica o ecológica</td><td>El Peruano</td><td><span class="st ok">Documentado</span></td></tr>
+      <tr><td>2019</td><td>Ley N.° 30983: modifica la Ley N.° 29196 y reconoce a los SGP</td><td>El Peruano</td><td><span class="st ok">Documentado</span></td></tr>
+      <tr><td>2020</td><td>D. S. N.° 002-2020-MINAGRI: los SGP deben ser autorizados por el SENASA</td><td>El Peruano</td><td><span class="st ok">Documentado</span></td></tr>
+      <tr><td>2023</td><td>D. S. N.° 003-2023-MIDAGRI: los consejos regionales del SGP inician su adecuación</td><td>El Peruano · IDMA</td><td><span class="st ok">Documentado</span></td></tr>
+      <tr><td>2024</td><td>Ámbito de IDMA: 1,480 productoras y productores, 126 núcleos, 729 certificados</td><td>IDMA (2025)</td><td><span class="st ok">Documentado</span></td></tr>
+      <tr><td>2025</td><td>La DRA Áncash reconoce oficialmente al Consejo Regional del SGP (resolución directoral)</td><td>DRA Áncash</td><td><span class="st ">Número y fecha por precisar</span></td></tr>
+      <tr><td>Por reconstruir</td><td>Conformación, instrumentos técnicos, expediente, auditoría, observaciones y subsanaciones</td><td>Expedientes · entrevistas</td><td><span class="st gap">Vacío que llena la sistematización</span></td></tr>
+      <tr><td>25/05/2026</td><td>El SENASA emite el certificado de autorización: primer CR SGP autorizado del país</td><td>SENASA · IDMA</td><td><span class="st ok">Documentado</span></td></tr>
+    </tbody></table></div>
   </div>
 </section>
 
@@ -338,6 +380,7 @@ footer small{color:#A6BFA2}
     <h2 class="rv d1">Cuatro preguntas, un eje</h2>
     <p class="lead rv d2"><b>Eje:</b> ¿qué hizo posible que el CR SGP Áncash obtuviera la autorización y qué aprendizajes sirven para sostenerlo y replicarlo? Pase el cursor (o toque) cada tarjeta.</p>
     <div class="flips" id="flips"></div>
+    <div class="gen rv d2"><h3>Enfoque de género: las mujeres como protagonistas del camino</h3><p>La actividad 4.2 del proyecto se centra en los <b>econegocios con mujeres</b>. Por eso el género atraviesa toda la sistematización:</p><ul><li><b>Un capítulo propio</b> en el documento: «Las mujeres en el camino hacia la autorización».</li><li><b>Un espacio solo de productoras</b> en el taller del día 8, para reconstruir su propia línea de tiempo.</li><li><b>Al menos 40 % de mujeres</b> entre las personas entrevistadas y una pregunta de género en cada guía.</li><li><b>Datos separados por sexo</b> y sus aportes con nombre propio, si ellas lo autorizan.</li></ul></div>
   </div>
 </section>
 
