@@ -171,6 +171,14 @@ section.s.alt{background:var(--surface2)}
 .tc .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--surface2);margin-bottom:10px}
 .tc .ic svg{width:26px;height:26px;stroke:var(--quinua);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tc p{color:var(--muted);font-size:.93rem;margin:0}
+.tool{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-s)}
+@media (max-width:760px){.tool{grid-template-columns:1fr}}
+.tool h4{margin:0 0 6px;font-size:1.05rem}
+.tool p{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+.tool dl{margin:0}.tool dt{font-weight:700;font-size:.82rem;margin-top:10px;color:var(--quinua)}.tool dd{margin:2px 0 0;font-size:.9rem}
+.tool pre{white-space:pre-wrap;background:var(--surface2);border-radius:12px;padding:10px 12px;font:inherit;font-size:.86rem;margin:4px 0 0}
+.tool .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tool button.cp{border:1px solid var(--line);background:var(--surface2);color:inherit;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer}
 /* Gantt */
 .gantt{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);overflow-x:auto}
 .gg{display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(15,minmax(26px,1fr));min-width:760px;align-items:center}
@@ -347,6 +355,34 @@ footer small{color:#A6BFA2}
       <div class="tc rv d3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M7 8v8M12 6v12M17 9v6"/></svg></div><h3>Taller de línea de tiempo</h3><p>Reconstrucción colectiva de hitos, crisis y momentos de impulso (día 8).</p></div>
       <div class="tc rv d4"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Taller de validación</h3><p>Las y los protagonistas corrigen y priorizan los hallazgos antes de la versión final (día 11).</p></div>
       <div class="tc rv d5"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM4 14h7v6H4zM15 14h5v6h-5z"/></svg></div><h3>Matriz de ruta normativa</h3><p>Requisito → instrumento → observación → subsanación → evidencia → tiempo empleado.</p></div>
+    </div>
+    <h3 class="rv" style="margin-top:46px">Registro digital con IA: del papelote al documento</h3>
+    <p class="lead rv d1">Con consentimiento, se graban las entrevistas, las reuniones y los talleres, se fotografían los papelotes, las tarjetas y las hojas de trabajo, y una IA los transcribe. El equipo revisa cada transcripción antes de usarla.</p>
+    <div class="tech">
+      <div class="tc rv d1"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>1. Captura en campo</h3><p>Fotos de papelotes y hojas, y audios de entrevistas y talleres, en una carpeta por actividad. La IA transcribe y clasifica por eje (OE1 a OE4); sin señal, usa OCR.</p></div>
+      <div class="tc rv d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8z"/></svg></div><h3>2. Drive y Apps Script</h3><p>Cada foto, audio y transcripción se guarda en Google Drive y se registra en Google Sheets con fecha, actor, técnica y eje.</p></div>
+      <div class="tc rv d3"><div class="ic"><svg viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></div><h3>3. Google Colab</h3><p>Limpieza, codificación temática, conteo de menciones, fechas para la cronología y matriz de ruta normativa.</p></div>
+      <div class="tc rv d4"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><h3>4. Revisión y devolución</h3><p>Cada cita se verifica contra la foto o el audio original. Los hallazgos alimentan este tablero y el informe final.</p></div>
+    </div>
+    <div class="tool rv d2">
+      <div>
+        <h4>Herramienta «Captura de taller»</h4>
+        <p>Aplicación web para el celular: captura, transcribe con IA y envía a Drive. Para este servicio se configura con el contexto y las categorías de la sistematización del CR SGP Áncash. Las claves de IA se guardan solo en el celular de cada integrante del equipo.</p>
+        <dl>
+          <dt>Nombres de las carpetas</dt><dd>Entrevista 01 – CR SGP Áncash · Taller de línea de tiempo (día 8) · Taller de validación (día 11) · Reunión con IDMA</dd>
+          <dt>Contexto u objetivo</dt><dd>Sistematización de «El camino hacia la autorización del CR SGP Áncash» ante el SENASA: hitos, actores, estrategias, requisitos, observaciones, subsanaciones, logros, dificultades y aprendizajes.</dd>
+        </dl>
+        <div class="acts"><a class="btn pri" href="https://taller-huanuco.2013101864.workers.dev/" target="_blank" rel="noopener">Abrir la herramienta ↗</a><button class="cp" type="button" onclick="(function(b){var t=document.getElementById('catsgp').innerText;try{navigator.clipboard.writeText(t).then(function(){b.textContent='Categorías copiadas ✓'})}catch(e){}})(this)">Copiar categorías</button></div>
+      </div>
+      <div>
+        <dl><dt>Categorías para clasificar (pegar en la herramienta, una por línea)</dt></dl>
+        <pre id="catsgp">OE1 Proceso histórico
+OE2 Articulación y fortalecimiento
+OE3 Ruta técnica, administrativa y normativa
+OE4 Logros, dificultades y factores
+Aportes de las mujeres
+Lecciones y recomendaciones</pre>
+      </div>
     </div>
   </div>
 </section>
